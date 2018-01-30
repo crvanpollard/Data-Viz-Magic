@@ -4,10 +4,13 @@ $(function () {
             renderTo: 'container',
             type: 'bar'
         },
+        title:{
+            text:''
+        },
         yAxis: {
             allowDecimals: false,
             title: {
-                text: 'Flip the Switch'
+                text: ''
             },
             tickInterval: 10, 
             min: 0,
@@ -31,6 +34,12 @@ $(function () {
                 colorByPoint: true
             }
         },
+        tooltip: {
+            formatter: function () {
+            return 'The value for <b>' + this.x +
+                '</b> is <b>' + this.y + '</b>';
+            }
+         },
         legend: {
             enabled: false
         },
@@ -53,7 +62,7 @@ $(function () {
         });
     });
     $('#youth').click(function() {
-        chart.series[0].setData([{y:93,color:'#ffffcc '},   {y:263,color:'#a1dab4 '},   {y:640,color:'#41b6c4 '},   {y:294,color:'#2c7fb8 '},   {y:79,color:'#253494'}] );
+        chart.series[0].setData([{y:93,color:'#ffffcc'},   {y:263,color:'#a1dab4'},   {y:640,color:'#41b6c4'},   {y:294,color:'#2c7fb8'},   {y:79,color:'#253494'}] );
         chart.yAxis[0].setExtremes(0,1369);
         chart.update({
             yAxis: {
@@ -65,7 +74,7 @@ $(function () {
     });
 
      $('#older').click(function() {
-        chart.series[0].setData([37, 371, 673, 200, 88] );
+        chart.series[0].setData([{y:37,color:'#ffffcc'},   {y:371,color:'#a1dab4'},   {y:673,color:'#41b6c4'},   {y:200,color:'#2c7fb8'},   {y:88,color:'#253494'}] );
         chart.yAxis[0].setExtremes(0,1369);
         chart.update({
             yAxis: {
@@ -74,7 +83,7 @@ $(function () {
         });
     });
      $('#female').click(function() {
-        chart.series[0].setData([29, 304, 703, 277, 56] );
+        chart.series[0].setData([{y:29,color:'#ffffcc'},   {y:304,color:'#a1dab4'},   {y:703,color:'#41b6c4'},   {y:277,color:'#2c7fb8'},  {y:56,color:'#253494'}] );
         chart.yAxis[0].setExtremes(0,1369);
         chart.update({
             yAxis: {
@@ -83,7 +92,7 @@ $(function () {
         });
     });
      $('#race').click(function() {
-        chart.series[0].setData([2,  612, 402, 152, 201] );
+        chart.series[0].setData([{y:2,color:'#ffffcc'},    {y:612,color:'#a1dab4'},   {y:402,color:'#41b6c4'},   {y:152,color:'#2c7fb8'},  {y:201,color:'#253494'}] );
         chart.yAxis[0].setExtremes(0,1369);
         chart.update({
             yAxis: {
@@ -92,7 +101,7 @@ $(function () {
         });
     });
      $('#ethnic').click(function() {
-        chart.series[0].setData([28, 323, 827, 99,  92] );
+        chart.series[0].setData([{y:28,color:'#ffffcc'},   {y:323,color:'#a1dab4'},   {y:827,color:'#41b6c4'},   {y:99,color:'#2c7fb8'},   {y:92,color:'#253494'}] );
         chart.yAxis[0].setExtremes(0,1369);
         chart.update({
             yAxis: {
@@ -101,7 +110,7 @@ $(function () {
         });
     });
      $('#foreign').click(function() {
-        chart.series[0].setData([4,  513, 553, 181, 118] );
+        chart.series[0].setData([{y:4,color:'#ffffcc'},    {y:513,color:'#a1dab4'},   {y:553,color:'#41b6c4'},   {y:181,color:'#2c7fb8'},  {y:118,color:'#253494'}] );
         chart.yAxis[0].setExtremes(0,1369);
         chart.update({
             yAxis: {
@@ -110,7 +119,7 @@ $(function () {
         });
     });
      $('#lep').click(function() {
-        chart.series[0].setData([24, 477, 629, 114, 125] );
+        chart.series[0].setData([{y:24,color:'#ffffcc'},   {y:477,color:'#a1dab4'},  {y:629,color:'#41b6c4'},  {y:114,color:'#2c7fb8'},  {y:125,color:'#253594'}] );
         chart.yAxis[0].setExtremes(0,1369);
         chart.update({
             yAxis: {
@@ -119,7 +128,7 @@ $(function () {
         });
     });
      $('#disabled').click(function() {
-        chart.series[0].setData([25, 424, 574, 251, 95] );
+        chart.series[0].setData([{y:25,color:'#ffffcc'},   {y:424,color:'#a1dab4'},  {y:574,color:'#41b6c4'},  {y:251,color:'#2c7fb8'},  {y:95,color:'#253594'}] );
         chart.yAxis[0].setExtremes(0,1369);
         chart.update({
             yAxis: {
@@ -128,7 +137,7 @@ $(function () {
         });
     });
        $('#income').click(function() {
-        chart.series[0].setData([3,  563, 444, 199, 160] );
+        chart.series[0].setData([{y:3,color:'#ffffcc'},    {y:563,color:'#a1dab4'},  {y:444,color:'#41b6c4'},  {y:199,color:'#2c7fb8'},  {y:160,color:'#253594'}] );
         chart.yAxis[0].setExtremes(0,1369);
         chart.update({
             yAxis: {

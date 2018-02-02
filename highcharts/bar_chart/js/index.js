@@ -32,10 +32,7 @@ $(function () {
         plotOptions: {
             bar: {
                 colorByPoint: true
-            },
-             series: {
-            pointWidth: 15
-        }
+            }
         },
         tooltip: { enabled: false },
         legend: {

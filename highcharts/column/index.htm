@@ -4,24 +4,76 @@
 <head>
   <meta charset="UTF-8">
   <title>Highcharts changing data with a button</title>
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+        <!-- Odometr includes -->
+<link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-minimal.css" />
+<script src="http://github.hubspot.com/odometer/odometer.js"></script>
+
+<style>
+.odometer {
+    font-size: 100px;
+}
+</style>
 </head>
 
 <body>
-
+   <div id="odometer" class="odometer">10</div>
   <div id="container" style="height: 300px; width:300px"></div>
-	<button id="ipd">IPD</button>
-	<button id="youth">Youth Gone Wild</button>
-	<button id="older">Elderly </button>
-	<button id="female">Female</button>
-	<button id="race">Race</button>
-	<button id="ethnic">Ethnic</button>
-	<button id="foreign">Elderly </button>
-	<button id="lep">LEP</button>
-	<button id="disabled">Disabled</button>
-	<button id="income">Low Income</button>
+  <div id="container2" style="height: 300px; width:300px; display:none"></div>
+	<div class="btn-group tradeBtn">
+                     <button data-toggle="dropdown" id="mi-year-select" class="btn btn-default dropdown-toggle btn-sm">Choose a Population Group<span class="caret"></span></button>
+                        <ul class="dropdown-menu" >
+                            <li id="ipd">
+                              <a href="#" data-value="NewScoreMe" >
+                                <img class="img-legend" src="lib/images/7.png" > Indicators of Potential Disadvantage (IPD)</a>
+                            </li>
+                            <li id="youth">
+                              <a href="#" data-value="AgeYouth_7">
+                                <img class="img-legend" src="lib/images/7.png"> Youth</a>
+                            </li>
+                                 <li>
+                              <a href="#" data-value="AgeOlder_7" >
+                                <img class="img-legend" src="lib/images/3.png" > Older Adults</a>
+                            </li>
+                             <li>
+                              <a href="#" data-value="SexFem_S_1">
+                                <img class="img-legend" src="lib/images/4.png"> Female</a>
+                            </li>
+                             <li>
+                              <a href="#" data-value="RaceMin_11" >
+                                <img class="img-legend" src="lib/images/9.png" > Racial Minority</a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="EthnMin_11" >
+                                <img class="img-legend" src="lib/images/9.png"> Ethnic Minority</a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="FornBorn_7" >
+                                <img class="img-legend" src="lib/images/7.png" > Foreign Born</a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="LEP_StdB_1" >
+                                <img class="img-legend" src="lib/images/1.png" > Limited English Proficiency (LEP)</a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="Disabled_7" >
+                                <img class="img-legend" src="lib/images/5.png" > Disabled</a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="LowInc_S_1" >
+                                <img class="img-legend" src="lib/images/6.png" > Low Income</a>
+                            </li>
+                        </ul>
+                </div>
+
 	
- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://code.highcharts.com/highcharts.js'></script>
+	
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+
 <script  src="js/index.js"></script>
 
 </body>
